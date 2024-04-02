@@ -20,7 +20,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     : "bg-default";
 
   return (
-    <div className="bg-[#fff] shadow-xl justify-between text-left items-start flex flex-col p-6 w-full rounded-xl">
+    <div className="bg-[#fff] shadow-lg justify-between text-left items-start flex flex-col p-6 w-full rounded-xl">
       <div className="flex items-center gap-2">
         <div className={`w-2.5 h-2.5 ${bgColorClass} rounded-full`}></div>
         <p className="text-sm">{tagText}</p>

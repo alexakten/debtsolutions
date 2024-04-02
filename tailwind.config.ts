@@ -13,7 +13,7 @@ const config: Config = {
         darkpurple: "#9B78E5",
         yellow: "#FFD686",
         green: "#5EEF7E",
-        blue: "#5E98EF",
+        blue: "#3787FE",
       },
       maxWidth: {
         "8xl": "1440px",
