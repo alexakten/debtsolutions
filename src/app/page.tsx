@@ -40,6 +40,7 @@ export default function Landing() {
   return (
     <main className="relative flex tracking-tight flex-col items-center px-3 text-center bg-[#F9F9F9] text-zinc-900 sm:px-8 2xl:text-lg">
       <Navbar />
+
       <section className="relative flex mt-48 w-full max-w-8xl flex-col justify-center items-center">
         <div className="px-6 py-1 text-black flex items-center gap-2 bg-white shadow-md rounded-full">
           {/* <div className="w-2.5 h-2.5 bg-black rounded-full"></div> */}
