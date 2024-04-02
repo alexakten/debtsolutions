@@ -1,54 +1,78 @@
 import Navbar from "./components/ui/Navbar";
 import Link from "next/link";
 import { Inter } from "next/font/google";
+import FeatureCard from "./components/ui/FeatureCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const steps = [
+const features = [
   {
-    number: "1",
-    title: "Learn",
+    tagColor: "purple",
+    tagText: "Earn",
+    title: "Cash flow forecasting",
     description:
-      "Connect with a community of experienced regenerative farmers.",
+      "Cash flow forecasting using machine learning algorithms and Markov chains.",
   },
   {
-    number: "2",
-    title: "Implement",
+    tagColor: "yellow",
+    tagText: "Budget",
+    title: "Cash flow forecasting",
     description:
-      "Get a customized regenerative agriculture plan for your farm.",
+      "We look over your current expenses and give you a customized budget.",
   },
   {
-    number: "3",
-    title: "Measure",
-    description: "Monitor soil health and carbon sequestration with our tools.",
+    tagColor: "green",
+    tagText: "Plan",
+    title: "Cash flow forecasting",
+    description:
+      "Cash flow forecasting using machine learning algorithms and Markov chains.",
   },
   {
-    number: "4",
-    title: "Share",
+    tagColor: "blue",
+    tagText: "Repay",
+    title: "Cash flow forecasting",
     description:
-      "Share your learnings with the community and keep improving your methods.",
+      "Cash flow forecasting using machine learning algorithms and Markov chains.",
   },
 ];
 
 export default function Landing() {
   return (
-    <main className="relative flex flex-col items-center px-3 text-center bg-gray-200 text-zinc-900 sm:px-8 2xl:text-lg">
+    <main className="relative flex tracking-tight flex-col items-center px-3 text-center bg-[#F9F9F9] text-zinc-900 sm:px-8 2xl:text-lg">
       <Navbar />
-      <section className="relative flex h-[100svh] w-full max-w-8xl flex-col justify-center items-center">
-        <p className="border px-4 py-1 border-gray-300 text-zinc-500 rounded-full">
-          🇸🇪 Launching in Sweden in 2024!
-        </p>
-        <h1 className="max-w-3xl mt-4 text-8xl tracking-tight">
-          The new way to repay your debt
+      <section className="relative flex mt-48 w-full max-w-8xl flex-col justify-center items-center">
+        <div className="px-6 py-1 text-black flex items-center gap-2 bg-white shadow-md rounded-full">
+          {/* <div className="w-2.5 h-2.5 bg-black rounded-full"></div> */}
+          <div className="flex ">
+            <p className="opacity-40">v.1 launching soon</p>
+            <button className="opacity-100 tracking-normal border-l pl-2 ml-2 hover:text-purple">
+              Join beta <span className={inter.className}>-&gt;</span>
+            </button>
+          </div>
+        </div>
+        <h1 className="max-w-4xl mt-4 text-8xl tracking-tight">
+          We help you repay your debt.
         </h1>
-        <h3 className="mt-8 max-w-md text-xl opacity-50">
+        {/* <h3 className="mt-8 max-w-md text-xl opacity-50">
           Stop worrying about your debt. Payable helps you set up a plan to pay
           back what you owe.
-        </h3>
+        </h3> */}
 
-        <button className="px-6 mt-8 py-2 rounded-full text-white bg-purple hover:bg-indigo-500 ">
+        <button className="px-6 mt-8 py-2 rounded-full tracking-normal text-white bg-black hover:bg-purple ">
           Get started <span className={inter.className}>-&gt;</span>
         </button>
+      </section>
+
+      <section className="grid m-20 grid-cols-4 w-full gap-4">
+        {features.map((feature, index) => (
+          <FeatureCard
+            key={index}
+            tagColor={feature.tagColor}
+            tagText={feature.tagText}
+            title={feature.title}
+            description={feature.description}
+          />
+        ))}
       </section>
     </main>
   );
