@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
         <button className="bg-black px-4 py-1.5 tracking-normal rounded-full text-white">
-          Login <span className={inter.className}>-&gt;</span>
+          Log in <span className={inter.className}>-&gt;</span>
         </button>
         <button
           onClick={handleClick}
