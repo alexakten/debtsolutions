@@ -50,7 +50,7 @@ export default function Landing() {
             </button>
           </div>
         </div>
-        <h1 className="max-w-4xl mt-4 text-8xl tracking-tight">
+        <h1 className="max-w-4xl mt-5 text-8xl tracking-tight">
           We help you repay your debt.
         </h1>
         {/* <h3 className="mt-8 max-w-md text-xl opacity-50">
